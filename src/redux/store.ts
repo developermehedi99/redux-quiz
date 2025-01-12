@@ -1,8 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { quizSlice } from "./features/quiz/quizSlice";
 // ...
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    quizs: quizSlice.reducer,
+  },
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
